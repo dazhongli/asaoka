@@ -2,6 +2,7 @@
 
 import os
 import ReadRawData
+import numpy as np
 
 
 cwd = os.getcwd()
@@ -13,10 +14,11 @@ for root, dirs,files in os.walk(r'.\RawData'):
 
 df = ReadRawData.read_xl_file(r'.\RawData\RA-11-SM1-1.xlsx')
 
+
 ReadRawData.plot_raw_data(df,'RawData\RA-11-SM1-1')
 
-def Asaoka(t,s,interval,starting_point):
-    pass
+
+    
 
 
     

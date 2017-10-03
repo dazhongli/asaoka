@@ -4,6 +4,7 @@ import pandas as pd
 import scipy as sp
 import matplotlib.pyplot as plt
 import os 
+import datetime
 
 def read_xl_file(filename):
     
@@ -23,6 +24,14 @@ def plot_raw_data(df,filename = ''):
     df_date = np.array(df['date'])
     df_settlement = np.array(df.settlement)
     df_groundlevel = np.array(df.ground_level)
+    
+    #calculate the relative distance
+    
+    for index, rows in df.iterrows():
+        for row in rows:
+            #calculate the timedelta between two dates
+            df.loc[index,'relative_time']=(df.loc[index,'date']-df.loc[0,'date'])/np.timedelta64(1,'D') 
+    
     ax_settlement.plot(df_date, df_settlement,'bx',markersize=4)
     ax_groundlevel.plot(df_date,df_groundlevel,'k')
     ax_settlement.set_xlabel('Date')
@@ -32,7 +41,6 @@ def plot_raw_data(df,filename = ''):
     
     #Set the axis of the plot
     ax_settlement.set_ylim(ax_settlement.get_ylim()[::-1])
-    
     
     plt.savefig('settlement vs time'+'.pdf',format='pdf')
     plt.show()
