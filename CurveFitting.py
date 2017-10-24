@@ -16,14 +16,13 @@ def exponential_settlement(t):
     return s_inf*(1-a*exp(b*t))
 #T0 - date array - numpy array
 #S0 - settlement array, numpy array
-def Asaoka_fit(T0,S0,interval,start_date=0, end_date=0):   
+def Asaoka_fit(T0,S0,interval,start_date=0, end_date=0):
     if end_date ==0:
         end_date = T0.max()
     if start_date==0:
         start_date =T0.min()
     #now convert T0 to days starting from the origin
     T0 =(T0-T0[0])/np.timedelta64(1,'D')
-    
     #user does not specify the end date for fitting, take the maximum
     start_date = np.datetime64(start_date)
     end_date = np.datetime64(end_date)
@@ -34,7 +33,6 @@ def Asaoka_fit(T0,S0,interval,start_date=0, end_date=0):
         T_bar[i] = origin + i*interval
     interpolate_1d = interp1d(T0,S0)
     S1=interpolate_1d(T_bar)
-    
     #fit the linear curve
     beta1, beta0 = polyfit(S1[0:-1], S1[1:],1)
     return beta0, beta1
@@ -44,9 +42,7 @@ def Asaoka_fit(T0,S0,interval,start_date=0, end_date=0):
 #    ax_Asaoka = fig.add_subplot(2,1,2)
 #    ax_Asaoka.plot(S1[0:-1],S1[1:],'ko',label=r'$s_i$ vs $s_{i-1}$',markersize=3)
 #    ax_Asaoka.set_xlabel(r'$S_{i-1}$')
-#    ax_Asaoka.set_ylabel(r'$S_i$')
-#    
-#    fitted_curve = lambda x: beta0 + beta1*x
+    ax_Asaoka.set_ylabel(r'$S_i$')
 #    step_of_S1 = len(S1)
 #    step_of_S_fitted = int(np.floor(step_of_S1*2.0)) #we will extend the data by 50%
 #    fitted_S = np.zeros(step_of_S_fitted)
@@ -69,13 +65,11 @@ def Asaoka_fit(T0,S0,interval,start_date=0, end_date=0):
 
 #by default we set the data_range = 3 (i.e. we use the first 3 month as data)    
 def exponetial_fit(df:pd.DataFrame,data_range, start_date,end_date =0):
-    
     pass
 
 # this function do the predictive analysis using a hyperbolic method
 def hyperbolic_fitting(df:pd.DataFrame,interval,start_date,end_date =0):
     pass
- 
 # - interval is only required for the asaoka's method, by default is set to zero,
 # - i.e., not used in the algorithm
 def fit_data(df:pd.DataFrame, start_date, end_date=0, option = 'Asaoka',interval = 0):
@@ -90,10 +84,7 @@ def fit_data(df:pd.DataFrame, start_date, end_date=0, option = 'Asaoka',interval
         pass
     elif option == 'hyperbolic':
         pass
-    
     total_days = end_date - start_date
-    
 
 
 
-    
