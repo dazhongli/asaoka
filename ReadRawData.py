@@ -58,4 +58,3 @@ def read_SMM_data_settlement(filename,sheetname=0,index_id=0):
         return df
     else:
         pass
-    
