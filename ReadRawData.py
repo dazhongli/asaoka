@@ -9,7 +9,7 @@ import statsmodels.api as sm
 
 
 def read_xl_file(filename):
-    df = pd.read_excel(,sheetname=0,
+    df = pd.read_excel(filename,sheetname=0,
                    skiprows=13)
     column_name = ['ID','date','tube_top','tube_heigth','plate_level','difference',
                'settlement','ground_level','remarks']
