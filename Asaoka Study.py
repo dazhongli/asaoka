@@ -21,5 +21,7 @@ SMM_path = r'C:\Users\dz.li\OneDrive\02 - Projects\Professional\HKBCF\00 - Monit
 SMM_filename = 'Graphical Plot for DS(O)11-SMM3B.xlsx'
 df_SMM = ReadRawData.read_SMM_data_settlement(os.path.join(SMM_path,SMM_filename),
                                               sheetname = 1,index_id= [2,3,4,5,6])
+df_SMM.settlement = -1*df_SMM.settlement
 ReadRawData.plot_raw_data([df_settlement,df_SMM],['DS(0)11-SM1-2R','DS(O)11-SMM3B'],
-                                         fig_name='test',ground_level=False)
+                                         fig_name='DS(O)-11 Settlement vs.Time',
+                                         ground_level=False)
