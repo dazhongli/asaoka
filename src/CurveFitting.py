@@ -62,7 +62,6 @@ def Asaoka_fit(T0,S0,interval,start_date=0, end_date=0):
 #    plt.savefig('Asaoka Plot'+'.pdf',format='pdf')
 #    plt.show()
 
-
 #by default we set the data_range = 3 (i.e. we use the first 3 month as data)    
 def exponetial_fit(df:pd.DataFrame,data_range, start_date,end_date =0):
     pass
@@ -79,12 +78,9 @@ def fit_data(df:pd.DataFrame, start_date, end_date=0, option = 'Asaoka',interval
     print(start_date)
     print(((end_date-start_date)/np.timedelta64(1,'D'))/30.5)
     if option =='Asaoka':
-        pass 
+        pass
     elif option =='general':
         pass
     elif option == 'hyperbolic':
         pass
     total_days = end_date - start_date
-
-
-

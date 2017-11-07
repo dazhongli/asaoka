@@ -1,0 +1,33 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Asaoka_fit	.\CurveFitting.py	/^def Asaoka_fit(T0,S0,interval,start_date=0, end_date=0):$/;"	f
+datetime	.\CurveFitting.py	/^import datetime$/;"	i
+exponential_settlement	.\CurveFitting.py	/^def exponential_settlement(t):$/;"	f
+exponetial_fit	.\CurveFitting.py	/^def exponetial_fit(df:pd.DataFrame,data_range, start_date,end_date =0):$/;"	f
+fit_data	.\CurveFitting.py	/^def fit_data(df:pd.DataFrame, start_date, end_date=0, option = 'Asaoka',interval = 0):$/;"	f
+hyperbolic_fitting	.\CurveFitting.py	/^def hyperbolic_fitting(df:pd.DataFrame,interval,start_date,end_date =0):$/;"	f
+interp1d	.\CurveFitting.py	/^from scipy.interpolate import interp1d$/;"	i
+matplotlib	.\CurveFitting.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	.\ReadRawData.py	/^import matplotlib.markers as mks$/;"	i
+matplotlib	.\ReadRawData.py	/^import matplotlib.pyplot as plt$/;"	i
+mks	.\ReadRawData.py	/^import matplotlib.markers as mks$/;"	i
+np	.\CurveFitting.py	/^import numpy as np$/;"	i
+np	.\ReadRawData.py	/^import numpy as np$/;"	i
+os	.\ReadRawData.py	/^import os$/;"	i
+pd	.\CurveFitting.py	/^import pandas as pd$/;"	i
+pd	.\ReadRawData.py	/^import pandas as pd$/;"	i
+plot_raw_data	.\ReadRawData.py	/^def plot_raw_data(dfs,df_names,fig_name,ground_level=True, offset=False,noc =2):$/;"	f
+plt	.\CurveFitting.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	.\ReadRawData.py	/^import matplotlib.pyplot as plt$/;"	i
+polyfit	.\CurveFitting.py	/^from scipy import polyfit$/;"	i
+project_opened	.\.ropeproject\config.py	/^def project_opened(project):$/;"	f
+read_SMM_data_settlement	.\ReadRawData.py	/^def read_SMM_data_settlement(filename,sheetname=0,index_id=0):$/;"	f
+read_settlement_data	.\ReadRawData.py	/^def read_settlement_data(filename,sheet_index,date_column,settlement_column,skiprows=0):$/;"	f
+read_xl_file	.\ReadRawData.py	/^def read_xl_file(filename):$/;"	f
+set_prefs	.\.ropeproject\config.py	/^def set_prefs(prefs):$/;"	f
+sm	.\ReadRawData.py	/^import statsmodels.api as sm$/;"	i
+statsmodels	.\ReadRawData.py	/^import statsmodels.api as sm$/;"	i
