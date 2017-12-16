@@ -17,8 +17,9 @@ def read_xl_file(filename):
     return df
 #below function read the sm files
 #noc sets the number of color used for plotting curves
-def plot_raw_data(dfs,df_names,fig_name,ground_level=False, offset=False,noc =2):
+def plot_raw_data(dfs,df_names,fig_name,ground_level=False, offset=False):
     #let's get the earlest data of the data frame
+    noc = len(dfs)
     dates = []
     #get the starting dates for all curves
     for df in dfs:
